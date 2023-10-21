@@ -14,5 +14,8 @@
 <ul>
 <% it.lists.forEach((list) => { %>
     <li><%= list.name %></li>
+    <form method="POST" action="/lists/<%= list.id%>/deactivate">
+        <input type="submit" value="Deactivate list!" />
+    </form>
 <% }); %>
 </ul>

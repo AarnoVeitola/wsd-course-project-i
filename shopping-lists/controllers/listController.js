@@ -19,4 +19,13 @@ const viewLists = async (request) => {
     return new Response(await renderFile("lists.eta", data), requestUtils.responseDetails);
 };
 
-export { addList, viewLists };
+const deactivateList = async (request) => {
+    const url = new URL(request.url);
+    const id = url.pathname.split("/")[2];
+
+    await listService.deactivate(id);
+
+    return requestUtils.redirectTo("/lists");
+};
+
+export { addList, viewLists, deactivateList };
