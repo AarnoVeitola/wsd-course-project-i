@@ -19,4 +19,4 @@ const viewLists = async (request) => {
     return new Response(await renderFile("lists.eta", data), requestUtils.responseDetails);
 };
 
-export { addList, viewLists }
+export { addList, viewLists };
