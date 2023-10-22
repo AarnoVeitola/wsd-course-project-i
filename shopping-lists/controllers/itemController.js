@@ -1,6 +1,7 @@
 import { renderFile  } from "../deps.js";
 import * as itemService from "../services/itemService.js";
 import * as requestUtils from "../utils/requestUtils.js";
+import * as listService from "../services/listService.js";
 
 const addItem = async (request) => {
     const url = new URL(request.url);
@@ -16,8 +17,12 @@ const addItem = async (request) => {
 const viewItems = async (request) => {
     const url = new URL(request.url);
     const list_id = url.pathname.split("/")[2];
+    const rows = await listService.listName(list_id);
+    const list_name = rows[0].name;
+    console.log(list_name);
     const data = {
         list_id: list_id,
+        list_name: list_name,
         collected: await itemService.findAllCollected(list_id),
         noncollected: await itemService.findAllNonCollected(list_id),
     };

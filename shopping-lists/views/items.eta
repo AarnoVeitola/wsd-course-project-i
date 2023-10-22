@@ -1,5 +1,9 @@
 <% layout("./layouts/layout.eta") %>
 
+<a href="/lists">Back to lists</a>
+
+<h1><%= it.list_name %></h1>
+
 <h2>Add an item</h2>
 
 <form method="POST" action="/lists/<%= it.list_id %>/items">
@@ -13,10 +17,10 @@
 <% it.noncollected.forEach((item) => { %>
     <li>
     <%= item.name %>
-    </li>
     <form method="POST" action="/lists/<%= item.shopping_list_id%>/items/<%= item.id%>/collected">
         <input type="submit" value="Mark as collected!" />
     </form>
+    </li>
 <% }); %>
 
 <% it.collected.forEach((item) => { %>
