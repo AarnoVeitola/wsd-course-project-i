@@ -16,4 +16,8 @@ const listName = async (id) => {
     return await sql`SELECT name FROM shopping_lists WHERE id = ${ id }`;
 };
 
-export { create, findAllActive, deactivate, listName };
+const listCount = async () => {
+    return await sql`SELECT COUNT(id) AS count FROM shopping_lists`;
+};
+
+export { create, findAllActive, deactivate, listName, listCount };
