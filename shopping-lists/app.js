@@ -2,6 +2,7 @@ import { serve } from "./deps.js";
 import { configure } from "./deps.js";
 import { renderFile } from "./deps.js";
 import * as listController from "./controllers/listController.js";
+import * as itemController from "./controllers/itemController.js";
 import * as requestUtils from "./utils/requestUtils.js";
 
 configure({
@@ -20,12 +21,12 @@ const handleRequest = async (request) => {
     return await listController.viewLists(request);
   } else if (url.pathname.match("lists/[0-9]+/deactivate") && request.method === "POST") {
     return await listController.deactivateList(request);
-  // } else if (url.pathname.match("lists/[0-9]+") && request.method === "GET") {
-  //   // VIEWING INDIVIDUAL LISTS
-  // } else if (url.pathname.match("lists/[0-9]+/items/[0-9]+/collect") && request.method === "POST") {
-  //   // MARK ITEM AS COLLECTED
-  // } else if (url.pathname.match("lists/[0-9]+/items") && request.method === "POST") {
-  //   // ADD AN ITEM
+  } else if (url.pathname.match("lists/[0-9]+/items/[0-9]+/collect") && request.method === "POST") {
+    return await itemController.collectItem(request);
+  } else if (url.pathname.match("lists/[0-9]+/items") && request.method === "POST") {
+    return await itemController.addItem(request);
+  } else if (url.pathname.match("lists/[0-9]+") && request.method === "GET") {
+    return await itemController.viewItems(request);
   } else {
     return new Response("Not found", { status: 404 });
   }
