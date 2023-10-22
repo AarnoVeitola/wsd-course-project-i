@@ -1,8 +1,8 @@
 <% layout("./layouts/layout.eta") %>
 
-<a href="/">Back to main page</a>
-
 <h1>Lists</h1>
+
+<a href="/">Back to main page</a>
 
 <h2>Add a shopping list</h2>
 
