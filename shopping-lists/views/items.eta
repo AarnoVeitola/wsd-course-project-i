@@ -2,7 +2,7 @@
 
 <h1><%= it.list_name %></h1>
 
-<a href="/lists">Back to lists</a>
+<a href="/lists">Shopping lists</a>
 
 <h2>Add an item</h2>
 
