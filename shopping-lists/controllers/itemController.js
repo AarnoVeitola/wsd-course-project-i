@@ -1,7 +1,7 @@
 import { renderFile  } from "../deps.js";
 import * as itemService from "../services/itemService.js";
-import * as requestUtils from "../utils/requestUtils.js";
 import * as listService from "../services/listService.js";
+import * as requestUtils from "../utils/requestUtils.js";
 
 const addItem = async (request) => {
     const url = new URL(request.url);

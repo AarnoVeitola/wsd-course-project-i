@@ -1,7 +1,7 @@
 import { renderFile  } from "../deps.js";
+import * as listService from "../services/listService.js";
 import * as itemService from "../services/itemService.js";
 import * as requestUtils from "../utils/requestUtils.js";
-import * as listService from "../services/listService.js";
 
 const viewStatistics = async (request) => {
     const list_rows = await listService.listCount();
