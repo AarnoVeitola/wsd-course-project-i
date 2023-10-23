@@ -4,7 +4,7 @@
 
 <a href="/lists">Lists</a>
 
-<% if (it.list_count === 0) { %>
+<% if (it.list_count === "0") { %>
 <p>No shopping lists yet.</p>
 <% } else { %> 
 <p>Shopping lists: <%= it.list_count %></p>
