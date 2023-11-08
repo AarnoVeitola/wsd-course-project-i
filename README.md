@@ -17,3 +17,6 @@ The controllers are divided into three different controllers, **listController.j
 
 ## Database
 The **database.js** file contains instructions for the database. If the **DATABASE_URL** environmental variable is available, then a _PostgreSQL_ database deployed by _Render_ is used. Otherwise, a locally hosted database is used. **database.js** uses **Postgres.js**, and hence a connection pool is used by default.
+
+# Running the application locally
+The application can be run locally simply by using **docker compose up --build**. If one wishes to run the application using an external database, the database url must be passed as an environmental variable **DATABASE_URL**.
