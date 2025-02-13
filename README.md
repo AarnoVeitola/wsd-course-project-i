@@ -1,7 +1,7 @@
-# Project 1: Shared shopping list
+# Project 1: Shared shopping list (an individual project for the Aalto University Web Software Development course)
 
 # Online link 
-https://aarno-unique-wsd-course-project-i.onrender.com
+https://aarno-unique-wsd-course-project-i.onrender.com (sadly not active anymore)
 
 # Project structure
 The project uses a layered architecture with **views**, **controllers**, **services**, and **database**. 
