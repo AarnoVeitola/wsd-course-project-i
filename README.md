@@ -1,6 +1,8 @@
 # Project 1: Shared shopping list (an individual project for the Aalto University Web Software Development course)
 
 # Online link 
+**There seems to be some issues with deploying the demo application on the free subscription of Render. This is under investigation, but there may be problems with accessing the page. Sorry for the inconvenience!**
+
 https://aarno-unique-wsd-course-project-i.onrender.com (deployed on the free version of Render, so the site may take some time to load)
 
 # Project structure
